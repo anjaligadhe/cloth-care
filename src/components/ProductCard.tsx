@@ -4,11 +4,12 @@ import { ShoppingBag } from "lucide-react";
 interface ProductCardProps {
   name: string;
   price: number;
+  marketPrice?: number;
   image: string;
   tag?: string;
 }
 
-const ProductCard = ({ name, price, image, tag }: ProductCardProps) => {
+const ProductCard = ({ name, price, marketPrice, image, tag }: ProductCardProps) => {
   return (
     <div className="card-product group">
       {/* Image */}
@@ -32,7 +33,12 @@ const ProductCard = ({ name, price, image, tag }: ProductCardProps) => {
           {name}
         </h3>
         <div className="flex items-center justify-between">
-          <p className="text-xl font-bold text-primary">₹{price}</p>
+          <div className="flex flex-col">
+            {marketPrice && (
+              <p className="text-sm text-muted-foreground line-through">₹{marketPrice}</p>
+            )}
+            <p className="text-xl font-bold text-primary">₹{price}</p>
+          </div>
           <Button variant="default" size="sm" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <ShoppingBag className="h-4 w-4 mr-2" />
             Add

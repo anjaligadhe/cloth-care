@@ -14,7 +14,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-primary">
+    <section id="newsletter" className="section-padding bg-primary">
       <div className="container-main">
         <div className="max-w-2xl mx-auto text-center">
           <div className="w-16 h-16 mx-auto bg-primary-foreground/20 rounded-full flex items-center justify-center mb-6">
