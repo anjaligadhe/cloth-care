@@ -31,6 +31,9 @@ const Header = () => {
             <a href="#benefits" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
               Why Choose Us
             </a>
+            <a href="#order" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
+              Order Now
+            </a>
             <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors font-medium">
               Contact
             </a>
@@ -38,12 +41,12 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="ghost" size="icon">
-              <ShoppingBag className="h-5 w-5" />
-            </Button>
-            <Button variant="hero" size="lg">
-              Shop Now
-            </Button>
+            <a href="#order">
+              <Button variant="hero" size="lg">
+                <ShoppingBag className="h-5 w-5 mr-2" />
+                Order Now
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -69,13 +72,19 @@ const Header = () => {
               <a href="#benefits" className="py-3 text-muted-foreground hover:text-foreground transition-colors font-medium">
                 Why Choose Us
               </a>
+              <a href="#order" className="py-3 text-muted-foreground hover:text-foreground transition-colors font-medium">
+                Order Now
+              </a>
               <a href="#contact" className="py-3 text-muted-foreground hover:text-foreground transition-colors font-medium">
                 Contact
               </a>
               <div className="pt-4 flex gap-3">
-                <Button variant="hero" className="flex-1">
-                  Shop Now
-                </Button>
+                <a href="#order" className="flex-1">
+                  <Button variant="hero" className="w-full">
+                    <ShoppingBag className="h-5 w-5 mr-2" />
+                    Order Now
+                  </Button>
+                </a>
               </div>
             </nav>
           </div>

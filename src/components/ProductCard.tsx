@@ -39,10 +39,12 @@ const ProductCard = ({ name, price, marketPrice, image, tag }: ProductCardProps)
             )}
             <p className="text-xl font-bold text-primary">₹{price}</p>
           </div>
-          <Button variant="default" size="sm" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <ShoppingBag className="h-4 w-4 mr-2" />
-            Add
-          </Button>
+          <a href="#order">
+            <Button variant="default" size="sm" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <ShoppingBag className="h-4 w-4 mr-2" />
+              Order Now
+            </Button>
+          </a>
         </div>
       </div>
     </div>
